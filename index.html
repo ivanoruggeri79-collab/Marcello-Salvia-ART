@@ -1,155 +1,109 @@
-<!--
-  File: index.html
-  Pagina singola responsive per "Marcello Salvia ART"
-  HTML separato dal CSS (vedi styles.css).
-  Commenti inclusi per ogni sezione.
--->
 <!doctype html>
 <html lang="it">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Marcello Salvia ART</title>
-  <meta name="description" content="Blog e portfolio artistico di Marcello Salvia.">
-  <!-- Collega il file CSS esterno -->
-  <link rel="stylesheet" href="styles.css">
+  <title>Lezioni di base di fotografia — Marcello Salvia</title>
+  <meta name="description" content="Lezioni base di fotografia: presentazione, tecniche essenziali, diaframma e tempi di esposizione. Risorse consigliate per approfondire.">
+  <meta name="keywords" content="Marcello Salvia, lezioni fotografia, diaframma, tempi esposizione, tecniche fotografiche">
+  <meta name="author" content="Marcello Salvia">
+  <link rel="canonical" href="https://username.github.io/repository/">
+  <style>
+    :root{--primary:#0b3d91;--bg:#f4f4f4;--text:#111;--muted:#666;--radius:10px;--container:1100px}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    a{color:var(--primary);text-decoration:none}
+    .container{max-width:var(--container);margin:0 auto;padding:18px}
+    header{background:#fff;padding:14px 0;border-bottom:1px solid #e6e6e6;position:sticky;top:0;z-index:30}
+    .brand{font-weight:700;color:var(--primary);font-size:1.05rem}
+    nav{margin-top:8px}
+    nav a{margin-right:12px;color:#222;font-weight:600}
+    main{padding:20px 0}
+    h1,h2{margin:0 0 10px}
+    .intro{background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    .grid{display:grid;gap:18px}
+    /* Responsive columns */
+    @media(min-width:800px){ .grid{grid-template-columns:1fr 420px} }
+    section.card{background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    ul{margin:0 0 0 18px}
+    .muted{color:var(--muted);font-size:0.95rem}
+    .cta{display:inline-block;margin-top:12px;background:var(--primary);color:#fff;padding:10px 14px;border-radius:8px;font-weight:700}
+    footer{margin-top:22px;padding:18px 0;text-align:center;color:var(--muted);font-size:0.92rem}
+    .links-list a{display:inline-block;margin:6px 10px 6px 0;padding:8px 10px;background:#f8f8fb;border-radius:8px;border:1px solid #eee}
+    code{background:#f4f6fb;padding:2px 6px;border-radius:6px;font-family:monospace}
+  </style>
 </head>
 <body>
-  <!-- Header con logo e navigazione -->
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <div class="logo" aria-hidden="false" aria-label="Marcello Salvia ART">
-        <!-- Logo testuale semantico -->
-        <a href="#home" class="logo-link">Marcello Salvia <span class="logo-accent">ART</span></a>
-      </div>
-
-      <!-- Toggle per menu mobile (no JS: checkbox hack) -->
-      <input id="nav-toggle" type="checkbox" class="nav-toggle" aria-hidden="true">
-      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
-        <span></span>
-      </label>
-
-      <nav class="main-nav" role="navigation" aria-label="Menu principale">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#servizi">Servizi</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contatti">Contatti</a></li>
-        </ul>
+  <header role="banner">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+      <div class="brand">Marcello Salvia</div>
+      <nav role="navigation" aria-label="Menu principale">
+        <a href="#home">Home</a>
+        <a href="#tecniche">Tecniche di base</a>
+        <a href="#diaframma">Diaframma e tempi</a>
+        <a href="#link-esterni">Link esterni</a>
       </nav>
     </div>
   </header>
 
-  <main id="home">
-    <!-- Sezione eroe con immagine e CTA -->
-    <section class="hero" role="region" aria-label="Sezione eroe principale">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <h1>Marcello Salvia ART</h1>
-          <p class="lead">Riflessioni visive, disegni e narrazione fotografica dal mio studio.</p>
-          <a class="btn-primary" href="#contatti">Contattaci</a>
-        </div>
-        <!-- Visual eroe: immagine decorativa con alt descrittivo -->
-        <div class="hero-image" aria-hidden="false">
-          <img src="https://via.placeholder.com/720x480?text=Marcello+Salvia+ART" alt="Esempio di lavoro artistico di Marcello Salvia">
-        </div>
-      </div>
-    </section>
+  <main id="home" class="container" role="main">
+    <div class="grid">
+      <section class="card intro" aria-labelledby="home-title">
+        <h1 id="home-title">Lezioni di base di fotografia</h1>
+        <p class="muted">Breve corso introduttivo pensato per chi inizia: concetti fondamentali, strumenti e prime esercitazioni pratiche.</p>
+        <p>Questo corso copre gli elementi essenziali per muovere i primi passi in fotografia: composizione, esposizione, gestione luce, obiettivi e tecniche pratiche per esercitarsi subito.</p>
+        <a class="cta" href="#tecniche">Inizia qui</a>
+      </section>
 
-    <!-- Sezione servizi con tre blocchi e icone semplificate -->
-    <section id="servizi" class="services" role="region" aria-label="Servizi offerti">
-      <div class="container">
-        <h2>Servizi</h2>
-        <p class="section-intro">Offro consulenza artistica, workshop e commissioni su misura.</p>
-        <div class="services-grid">
-          <article class="service-card" aria-labelledby="s1">
-            <!-- Icona SVG inline leggera per accessibilità -->
-            <div class="icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.2"/>
-                <path d="M7 14h10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-                <path d="M7 10h10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 id="s1">Consulenze creative</h3>
-            <p>Progetti su misura per gallerie, spazi culturali e brand.</p>
-          </article>
-
-          <article class="service-card" aria-labelledby="s2">
-            <div class="icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="1.2"/>
-                <path d="M5 20c1-4 6-6 7-6s6 2 7 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 id="s2">Workshop</h3>
-            <p>Laboratori pratici su tecniche miste e storytelling visivo.</p>
-          </article>
-
-          <article class="service-card" aria-labelledby="s3">
-            <div class="icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M3 7h18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-                <rect x="3" y="11" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.2"/>
-              </svg>
-            </div>
-            <h3 id="s3">Commissioni</h3>
-            <p>Opere e installazioni realizzate su richiesta.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sezione team con foto -->
-    <section id="team" class="team" role="region" aria-label="Team">
-      <div class="container">
-        <h2>Il team</h2>
-        <p class="section-intro">Collaboratori e partner creativi.</p>
-        <div class="team-grid">
-          <div class="member-card">
-            <img src="https://via.placeholder.com/240?text=Marcello" alt="Marcello Salvia, artista">
-            <h4>Marcello Salvia</h4>
-            <p>Artista e fondatore</p>
-          </div>
-
-          <div class="member-card">
-            <img src="https://via.placeholder.com/240?text=Anna" alt="Anna Bianchi, curatrice">
-            <h4>Anna Bianchi</h4>
-            <p>Curatrice</p>
-          </div>
-
-          <div class="member-card">
-            <img src="https://via.placeholder.com/240?text=Luca" alt="Luca Verdi, tecnico">
-            <h4>Luca Verdi</h4>
-            <p>Produzione tecnica</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer con contatti -->
-  <footer id="contatti" class="site-footer" role="contentinfo" aria-label="Contatti e informazioni">
-    <div class="container footer-inner">
-      <div class="contact-block">
-        <h3>Contatti</h3>
-        <p>Email: <a href="mailto:info@marcellosalvia.art">info@marcellosalvia.art</a></p>
-      </div>
-      <small class="copyright">© Marcello Salvia ART</small>
+      <aside class="card" aria-label="Info rapida">
+        <h2>Info rapida</h2>
+        <p class="muted">Durata suggerita: 4 settimane; Materiale richiesto: fotocamera o smartphone, tre obiettivi o impostazioni diverse.</p>
+        <p><strong>Keyword principale:</strong> Marcello Salvia</p>
+      </aside>
     </div>
-  </footer>
 
-  <!-- Small progressive enhancement JS: chiude il menu al clic su link (facoltativo, miglior esperienza) -->
-  <script>
-    // Se presente, chiude il checkbox menu quando si clicca su un link di navigazione (migliora UX mobile)
-    (function(){
-      var navLinks = document.querySelectorAll('.main-nav a');
-      var toggle = document.getElementById('nav-toggle');
-      if (!navLinks || !toggle) return;
-      navLinks.forEach(function(a){
-        a.addEventListener('click', function(){ toggle.checked = false; });
-      });
-    })();
-  </script>
+    <section id="tecniche" class="card" style="margin-top:18px" aria-labelledby="tech-title">
+      <h2 id="tech-title">Tecniche di base</h2>
+      <p>Composizione: regola dei terzi, linee guida e uso dello spazio negativo per rendere le immagini più interessanti.</p>
+      <p>Gestione della luce: riconoscere luce dura e morbida, usare riflettori naturali e sfruttare l'ora d'oro per ritratti e paesaggi.</p>
+      <p>Bilanciamento del bianco e colore: impostazioni per mantenere tonalità naturali e correggere dominanti di colore in post-produzione.</p>
+      <h3>Esercizi pratici</h3>
+      <ul>
+        <li>Scatta 10 foto con luce naturale variando la distanza dal soggetto.</li>
+        <li>Prova 5 ritratti alla luce dell'ora d'oro usando diverse aperture.</li>
+        <li>Realizza una serie di tre immagini in bianco e nero per studiare contrasto e texture.</li>
+      </ul>
+    </section>
+
+    <section id="diaframma" class="card" style="margin-top:18px" aria-labelledby="aperture-title">
+      <h2 id="aperture-title">Diaframma e tempi di esposizione</h2>
+      <p>Il diaframma controlla la quantità di luce che entra nell'obiettivo e la profondità di campo: aperture ampie (es. f/1.8) riducono la profondità di campo, aperture strette (es. f/16) aumentano la nitidezza su più piani.</p>
+      <p>I tempi di esposizione determinano il tempo durante il quale il sensore è esposto alla luce: tempi lunghi catturano movimento e richiedono treppiede, tempi brevi congelano l'azione.</p>
+      <h3>Regola base</h3>
+      <p>Esposizione corretta = combinazione bilanciata di diaframma, tempo di esposizione e sensibilità ISO; sperimenta per trovare il bilanciamento desiderato.</p>
+      <h3>Esercizio consigliato</h3>
+      <ul>
+        <li>Scatta la stessa scena con tre aperture differenti mantenendo ISO fisso per osservare la variazione della profondità di campo.</li>
+        <li>Scatta soggetti in movimento con tempi progressivamente più rapidi per capire la soglia di congelamento del movimento.</li>
+      </ul>
+    </section>
+
+    <section id="link-esterni" class="card" style="margin-top:18px" aria-labelledby="links-title">
+      <h2 id="links-title">Link esterni consigliati</h2>
+      <p class="muted">Risorse e comunità per approfondire, esercitarsi e trovare ispirazione.</p>
+      <div class="links-list" style="margin-top:12px">
+        <a href="https://motionarray.com/learn/photography/best-photography-websites/" target="_blank" rel="noopener">Motion Array — risorse e siti consigliati</a>
+        <a href="https://photography.tutsplus.com/articles/10-best-photography-websites-courses-resources-to-learn-photography--cms-108514" target="_blank" rel="noopener">Tuts+ Photography — tutorial e corsi</a>
+        <a href="https://www.webcitz.com/blog/50-best-photographer-websites/" target="_blank" rel="noopener">WebCitz — esempi di portfolio e ispirazione</a>
+        <a href="https://expertphotography.com/best-photography-websites/" target="_blank" rel="noopener">ExpertPhotography — guide e risorse aggiornate</a>
+        <a href="https://www.photowhoa.com/blog/online-photography-courses-websites/" target="_blank" rel="noopener">Photowhoa — corsi e piattaforme didattiche</a>
+      </div>
+    </section>
+
+    <footer role="contentinfo" class="card" style="margin-top:18px;text-align:center">
+      <p>© <strong>Marcello Salvia</strong> — Lezioni di base di fotografia</p>
+      <p class="muted">Pagina ottimizzata per la ricerca su <strong>Marcello Salvia</strong></p>
+    </footer>
+  </main>
 </body>
 </html>
