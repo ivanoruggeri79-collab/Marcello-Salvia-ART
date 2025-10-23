@@ -1,44 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ivanoruggeri79-collab.github.io/Marcello-Salvia-ART/</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://ivanoruggeri79-collab.github.io/Marcello-Salvia-ART/lezioni/</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://ivanoruggeri79-collab.github.io/Marcello-Salvia-ART/about/</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://ivanoruggeri79-collab.github.io/Marcello-Salvia-ART/contatti/</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Esempio di entry per immagini: sostituire image:loc con URL reale dell'immagine -->
-  <url>
-    <loc>https://ivanoruggeri79-collab.github.io/Marcello-Salvia-ART/lezioni/esposizione/</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://ivanoruggeri79-collab.github.io/Marcello-Salvia-ART/assets/images/esempio.jpg</image:loc>
-      <image:caption>Dimostrazione esposizione</image:caption>
-    </image:image>
   </url>
 </urlset>
