@@ -1,3 +1,4 @@
 User-agent: *
-Disallow:
-Sitemap: https://ivanoruggeri79-collab.github.io/Marcello-Salvia-ART/sitemap.xml.
+Allow: /
+
+Sitemap: https://ivanoruggeri79-collab.github.io/Marcello-Salvia-ART/sitemap.xml
